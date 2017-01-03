@@ -1,0 +1,7 @@
+event:
+    event: event
+    create: create an event
+    update: update an event
+    delete: remove an event
+    datetime: date
+    name: name

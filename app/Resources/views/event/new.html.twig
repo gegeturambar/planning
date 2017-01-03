@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>{{ 'event.event' | trans( {}, 'event' ) | capitalize }}</h2>
+
+    {{ form_start(form, { 'attr':{ 'novalidate':'novalidate'} } ) }}
+        <p>
+            {{ form_label(form.name, 'event.name' | trans( {}, 'event') | capitalize ~ ':') }}
+            {{ form_widget(form.name) }}
+        </p>
+        <p>
+            {{ form_label(form.datetime, 'event.datetime' | trans( {}, 'event') | capitalize ~ ':') }}
+            {{ form_widget(form.datetime) }}
+        </p>
+        <input type="submit" value="{{ 'event.create' | trans( {}, 'event') | capitalize }}" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('event_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

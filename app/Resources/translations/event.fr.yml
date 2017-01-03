@@ -1,0 +1,7 @@
+event:
+    event: evenement
+    create: créer un évenement
+    update: modifier un évenement
+    delete: supprimer un évenement
+    datetime: date
+    name: nom
